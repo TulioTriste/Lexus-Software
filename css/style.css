@@ -11,3 +11,85 @@ body {
 footer {
     margin-top: auto;
 }
+
+.footer-div {
+    color: #e9ecef;
+}
+
+.section-space {
+    margin: 15px;
+}
+
+.space-form {
+    display: flex;
+    grid-template-columns: 1fr minmax(100px , 1fr);
+    justify-content: center;
+}
+
+.space-solicitud {
+    display: flex;
+    grid-template-columns: 1fr minmax(100px , 1fr);
+    justify-content: space-between;
+}
+
+.term {
+display: flex;
+justify-content: center;
+}
+
+.terms {
+    color: #004040;
+}
+  
+.terms:hover {
+    color: #028d8d;
+}
+
+.form-control {
+    background-color: #e9ecef;
+}
+
+.form-alert {
+    color: rgb(245, 44, 44);
+}
+
+.formulario {
+    margin: 0 auto;
+    width: 450px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.better-background {
+    background-color: white;
+    padding: 10px;
+}
+
+.ul-left {
+    text-align: left;
+    list-style: none;
+    margin-left: 1%;
+}
+
+.items {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+.opts {
+background-color: #e9ecef;
+margin: 5px;
+width: 210px;
+border: none;
+padding: 10px;
+}
+
+.opts-categoria {
+width: 180px;
+}
+
+.opts-animation:hover {
+    transition: transform 0.5s;
+    transform: scale(1.05);
+}
