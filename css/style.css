@@ -1,7 +1,3 @@
-.options {
-    justify-content: center;
-}
-
 body {
     display: flex;
     flex-direction: column;
@@ -10,6 +6,24 @@ body {
 
 footer {
     margin-top: auto;
+}
+
+a:link, a:visited, a:active {
+    text-decoration:none;
+    color: white;
+}
+
+a:hover {
+    transition: 0.2s;
+    color: #02c2c2;
+}
+
+.navbar-background {
+    background-color: #004040;
+}
+
+.options {
+    justify-content: center;
 }
 
 .footer-div {
@@ -77,11 +91,12 @@ justify-content: center;
   }
 
 .opts {
-background-color: #e9ecef;
+background-color: #004040;
 margin: 5px;
-width: 210px;
+width: 300px;
 border: none;
 padding: 10px;
+border-radius: 10px;
 }
 
 .opts-categoria {
@@ -91,4 +106,9 @@ width: 180px;
 .opts-animation:hover {
     transition: transform 0.5s;
     transform: scale(1.05);
+}
+
+.back-footer {
+    background-color: #004040;
+    color: white;
 }
