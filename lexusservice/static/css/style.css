@@ -18,8 +18,48 @@ a:hover {
     color: #02c2c2;
 }
 
+.bi-book {
+    color: #004040;
+}
+
+.txt-area{
+    font-size: larger;
+    color: #004040;
+}
+
+.txt-{
+    font-size: xx-large;
+    color: #004040;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.footer-section {
+    display: inline-table;
+    margin: 0 40px;
+    text-align: left;
+}
+
+.footer-section h4 {
+    margin-bottom: 10px;
+    justify-content: center;
+}
+
+.footer-section ul {
+    list-style: none;
+        padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 5px;
+}
+
 .navbar-background {
     background-color: #004040;
+}
+
+.nav-position {
+    margin-left: 35%;
 }
 
 .options {
@@ -90,7 +130,7 @@ justify-content: space-between;
 .opts {
 background-color: #004040;
 margin: 5px;
-width: 300px;
+width: 330px;
 border: none;
 padding: 10px;
 border-radius: 10px;
@@ -116,8 +156,26 @@ width: 180px;
     right: 20px;
 }
 
-.login {
-    text-align: end!important;
-    justify-content: end!important;
-    align-items: end!important;
+.info-view:hover {
+    transition: 0.2s;
+    color: white;
+}
+
+.text-green {
+    color: #004040!important;
+}
+
+.text-green:hover {
+    transition: 0.2s;
+    color: #008080!important;
+}
+
+.btn-green {
+    background-color: #004040;
+    color: white!important;
+}
+
+.btn-green:hover {
+    transition: 0.2s;
+    background-color: #008080;
 }

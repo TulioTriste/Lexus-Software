@@ -13,3 +13,12 @@ def registro(request):
 
 def password_recovery(request):
     return render(request, 'pages/password-recovery.html')
+
+def info(request):
+    return render(request, 'pages/info.html')
+
+def terms(request):
+    return render(request, 'pages/terms.html')
+
+def politics(request):
+    return render(request, 'pages/politics.html')
