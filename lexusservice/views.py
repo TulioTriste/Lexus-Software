@@ -22,3 +22,6 @@ def terms(request):
 
 def politics(request):
     return render(request, 'pages/politics.html')
+
+def user(request):
+    return render(request, 'pages/user.html')
