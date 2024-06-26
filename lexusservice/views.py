@@ -24,4 +24,22 @@ def politics(request):
     return render(request, 'pages/politics.html')
 
 def user(request):
-    return render(request, 'pages/user.html')
+    return render(request, 'profile/user.html')
+
+def solicitudes(request):
+    return render(request, 'profile/solicitudes.html')
+
+def causas(request):
+    return render(request, 'profile/causas.html')
+
+def finanzas(request):
+    return render(request, 'profile/finanzas.html')
+
+def jt_solicitud(request):
+    return render(request, 'juridic-tecnic/jt-solicitud.html')
+
+def jt_info(request):
+    return render(request, 'juridic-tecnic/jt-info.html')
+
+def jt_view_solicitud(request):
+    return render(request, 'juridic-tecnic/jt-view-solicitud.html')

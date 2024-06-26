@@ -2,7 +2,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 footer {
@@ -24,33 +24,6 @@ a:hover {
 a {
   transition: 0.2s;
 }
-
-/* Navbar user */
-.navbar-user .container-fluid, 
-.navbar-expand-lg-user .navbar-collapse-user, 
-.navbar-expand-lg-user .navbar-nav-user{
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-@media (min-width: 992px) {
-  .navbar-user {
-    width: 28%;
-    height: 100vh;
-  }
-  form input {
-    margin-bottom: 0.7em;
-  }
-}
-.navbar-brand-user {
-  margin-left: 0.5em;
-  padding-bottom: 0;
-  border-bottom: 4px solid #464646;
-}
-.navbar-user {
-  align-items: flex-start;
-}
-/* Fin Navbar user */
 
 .text-bg-green {
   background-color: #004040;
@@ -148,6 +121,17 @@ a {
   background-color: white;
 }
 
+.formulario-user {
+  margin: 0 auto;
+  width: 100;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.info-user {
+  justify-content: space-evenly;
+}
+
 .space-solicitud {
   justify-content: center;
 }
@@ -160,6 +144,7 @@ a {
 .better-background {
   background-color: white;
   padding: 10px;
+  border-radius: 5px;
 }
 
 .ul-left {
@@ -231,8 +216,8 @@ a {
 }
 
 .text-green-user {
-    color: #004040;
-  }
+  color: #004040;
+}
 
 .text-green {
   transition: 0.2s;
@@ -256,28 +241,28 @@ a {
 }
 
 .info-files:hover {
-    transition: 0.3s;
-    background-color: #e9ecef;
-    padding: 5px;
-    border-radius: 5px;
+  transition: 0.3s;
+  background-color: #e9ecef;
+  padding: 5px;
+  border-radius: 5px;
 }
 
 .info-files {
-    transition: 0.3s;
+  transition: 0.3s;
 }
 
 .user-files:hover {
-    transition: 0.3s;
-    background-color: #006060;
-    padding: 5px;
-    border-radius: 5px;
+  transition: 0.3s;
+  background-color: #006060;
+  padding: 5px;
+  border-radius: 5px;
 }
 
 .user-files {
-    transition: 0.3s;
+  transition: 0.3s;
 }
 
 .card-green {
-    background-color: #004040;
-    color: white;
+  background-color: #004040;
+  color: white;
 }

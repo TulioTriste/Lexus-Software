@@ -4,7 +4,7 @@
   <!-- Navbar section -->
   <nav class="navbar navbar-expand-lg navbar-background">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="{% url 'index' %}">
         <img
           src="{% static 'img/logo.png' %}"
           alt="Lexus-Service"
@@ -65,7 +65,7 @@
                 data-bs-target="#offcanvasDarkNavbar"
                 aria-controls="navbarOffcanvasLg"
                 aria-label="Toggle navigation"
-                >Mi Cuenta</a
+                >Usuario</a
               >
             </div>
           </li>
@@ -74,5 +74,5 @@
     </div>
   </nav>
   <!-- Fin Navbar -->
-   {% include 'base/info-user.html' %}
+   {% include 'base/nav-user.html' %}
 </header>
