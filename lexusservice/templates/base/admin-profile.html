@@ -25,23 +25,17 @@
   <div class="offcanvas-body">
     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
       <li class="nav-item user-files">
-        <a class="nav-link active" aria-current="page" href="{% url 'user' %}">Mi Prefil</a>
+        <a class="nav-link active" aria-current="page" href="{% url 'layer-view' %}">Mi Prefil</a>
       </li>
       <hr>
       <li class="nav-item user-files">
-        <a class="nav-link" href="{% url 'solicitudes' %}">Solicitudes</a>
-      </li>
-      <li class="nav-item user-files">
-        <a class="nav-link" href="{% url 'causas' %}">Causas</a>
-      </li>
-      <li class="nav-item user-files">
-        <a class="nav-link" href="{% url 'finanzas' %}">Finanzas</a>
+        <a class="nav-link" href="{% url 'layer-view-causas' %}">Generar Reporte</a>
       </li>
     </ul>
     <hr>
     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
       <li class="nav-item user-files">
-        <a class="nav-link" href="">Cerrar Sesion</a>
+        <a class="nav-link" href="{% url 'index' %}">Cerrar Sesion</a>
       </li>
     </ul>
   </div>

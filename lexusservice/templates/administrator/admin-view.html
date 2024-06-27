@@ -13,7 +13,7 @@
     />
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
   </head>
-  {% include 'base/nav-layer.html' %}
+  {% include 'base/nav-admin.html' %}
   <body>
     {% include 'base/carousel.html' %}
     <div class="go-back">
@@ -37,7 +37,7 @@
         <div class="items d-flex justify-content-center">
           <div>
             <div class="opts opts-animation">
-              <a class="info-view" href="{% url 'layer-view-diligencias' %}">
+              <a class="info-view" href="{% url 'admin-report-mensual' %}">
                 <div class="m-3 text-white">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -54,15 +54,15 @@
                       d="M9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5zm0 1v2A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"
                     />
                   </svg>
-                  <h4 class="mt-2">Generar Diligencia</h4>
-                  <p>Haga click en este enlace para generar una diligencia.</p>
+                  <h4 class="mt-2">Generar reporte mensual</h4>
+                  <p>Haga click en este enlace para generar un reporte mensual </p>
                 </div>
               </a>
             </div>
           </div>
           <div>
             <div class="opts opts-animation">
-              <a class="info-view" href="{% url 'layer-view-causas' %}">
+              <a class="info-view" href="{% url 'admin-report-anual' %}">
                 <div class="m-3 text-white">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -79,10 +79,9 @@
                       d="M4 6.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5H7a.5.5 0 0 1 0 1H4.5a.5.5 0 0 1-.5-.5"
                     />
                   </svg>
-                  <h4 class="mt-2">Ver Causas</h4>
+                  <h4 class="mt-2">Generar reporte anual</h4>
                   <p>
-                    Haga click en este enlace para gestionar las Causas
-                    generadas.
+                    Haga click en este enlace para generar un reporte anual.
                   </p>
                 </div>
               </a>

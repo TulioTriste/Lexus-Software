@@ -47,9 +47,6 @@ def budget(request):
 def jt_pays(request):
     return render(request, 'juridic-tecnic/jt-pays.html')
 
-def view_pays(request):
-    return render(request, 'profile/view-pays.html')
-
 def view_causas(request):
     return render(request, 'profile/view-causas.html')
 
@@ -58,3 +55,24 @@ def view_solicitud(request):
 
 def layer_view(request):
     return render(request, 'layers/layer-view.html')
+
+def layer_causas(request):
+    return render(request, 'layers/layer-causas.html')
+
+def layer_view_diligencias(request):
+    return render(request, 'layers/layer-view-diligencias.html')
+
+def layer_view_causas(request):
+    return render(request, 'layers/layer-view-causas.html')
+
+def layer_diligencias(request):
+    return render(request, 'layers/layer-diligencias.html')
+
+def admin_view(request):
+    return render(request, 'administrator/admin-view.html')
+
+def admin_report_mensual(request):
+    return render(request, 'administrator/admin-report-mensual.html')
+
+def admin_report_anual(request):
+    return render(request, 'administrator/admin-report-anual.html')

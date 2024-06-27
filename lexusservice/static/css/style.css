@@ -259,6 +259,18 @@ a {
   font-size: larger;
 }
 
+.btn-green-layer {
+  transition: 0.2s;
+  background-color: #004040;
+  color: white !important;
+  justify-content: end;
+}
+
+.btn-green-layer:hover {
+  transition: 0.2s;
+  background-color: #008080;
+}
+
 .btn-green {
   transition: 0.2s;
   background-color: #004040;
