@@ -13,128 +13,259 @@
     />
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
   </head>
-  {% include 'base/navbar.html' %}
+  {% include 'base/nav-jt.html' %}
   <body>
     {% include 'base/carousel.html' %}
+    <div class="go-back">
+      <a class="text-green-back" href="{% url 'index' %}">
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-arrow-bar-left" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M12.5 15a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 1 0v13a.5.5 0 0 1-.5.5M10 8a.5.5 0 0 1-.5.5H3.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L3.707 7.5H9.5a.5.5 0 0 1 .5.5"/>
+        </svg>
+        Volver
+      </a>
+    </div>
     <main>
-      <!-- Inicio Categorias -->
-      <section class="section-space">
-        <div class="container-fluid">
-          <div
-            class="row justify-content-center align-items-center text-center text-md-left"
-          ></div>
-        </div>
-      </section>
-      <section class="section-space">
-        <div class="items d-flex justify-content-center">
-          <div>
-            <div class="opts opts-animation">
-              <a class="info-view" href="{% url 'jt-solicitud' %}">
-                <div class="m-3 text-white">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="50"
-                    height="50"
-                    fill="currentColor"
-                    class="bi bi-file-earmark-text"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      d="M5.5 7a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1zM5 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m0 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5"
-                    />
-                    <path
-                      d="M9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5zm0 1v2A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"
-                    />
-                  </svg>
-                  <h4 class="mt-2">Generar Solicitud</h4>
-                  <p>Haga click en este enlace para generar una solicitud.</p>
-                </div>
-              </a>
-            </div>
-            <div class="opts opts-animation">
-              <a class="info-view" href="{% url 'jt-view-solicitud' %}">
-                <div class="m-3 text-white">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="50"
-                    height="50"
-                    fill="currentColor"
-                    class="bi bi-file-earmark-lock"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      d="M10 7v1.076c.54.166 1 .597 1 1.224v2.4c0 .816-.781 1.3-1.5 1.3h-3c-.719 0-1.5-.484-1.5-1.3V9.3c0-.627.46-1.058 1-1.224V7a2 2 0 1 1 4 0M7 7v1h2V7a1 1 0 0 0-2 0M6 9.3v2.4c0 .042.02.107.105.175A.64.64 0 0 0 6.5 12h3a.64.64 0 0 0 .395-.125c.085-.068.105-.133.105-.175V9.3c0-.042-.02-.107-.105-.175A.64.64 0 0 0 9.5 9h-3a.64.64 0 0 0-.395.125C6.02 9.193 6 9.258 6 9.3"
-                    />
-                    <path
-                      d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2M9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z"
-                    />
-                  </svg>
-                  <h4 class="mt-2">Ver Solicitudes</h4>
-                  <p>
-                    Haga click en este enlace para gestionar las solicitudes
-                    generadas.
-                  </p>
-                </div>
-              </a>
+      <!-- Info jt -->
+       <div class="d-flex justify-content-center mb-3">
+        <section class="section-space">
+          <div class="items d-flex">
+            <div>
+              <div class="opts opts-animation">
+                <a class="info-view" href="{% url 'jt-solicitud' %}">
+                  <div class="m-3 text-white">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="50"
+                      height="50"
+                      fill="currentColor"
+                      class="bi bi-file-earmark-text"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M5.5 7a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1zM5 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m0 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5"
+                      />
+                      <path
+                        d="M9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5zm0 1v2A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"
+                      />
+                    </svg>
+                    <h4 class="mt-2">Generar Solicitud</h4>
+                    <p>Haga click en este enlace para generar una solicitud.</p>
+                  </div>
+                </a>
+              </div>
             </div>
           </div>
-          <div>
-            <div class="opts opts-animation">
-              <a class="info-view" href="{% url 'jt-view-solicitud' %}">
-                <div class="m-3 text-white">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="50"
-                    height="50"
-                    fill="currentColor"
-                    class="bi bi-file-earmark-lock"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      d="M10 7v1.076c.54.166 1 .597 1 1.224v2.4c0 .816-.781 1.3-1.5 1.3h-3c-.719 0-1.5-.484-1.5-1.3V9.3c0-.627.46-1.058 1-1.224V7a2 2 0 1 1 4 0M7 7v1h2V7a1 1 0 0 0-2 0M6 9.3v2.4c0 .042.02.107.105.175A.64.64 0 0 0 6.5 12h3a.64.64 0 0 0 .395-.125c.085-.068.105-.133.105-.175V9.3c0-.042-.02-.107-.105-.175A.64.64 0 0 0 9.5 9h-3a.64.64 0 0 0-.395.125C6.02 9.193 6 9.258 6 9.3"
-                    />
-                    <path
-                      d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2M9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z"
-                    />
-                  </svg>
-                  <h4 class="mt-2">Ver Solicitudes</h4>
-                  <p>
-                    Haga click en este enlace para gestionar las solicitudes
-                    generadas.
-                  </p>
-                </div>
-              </a>
+        </section>
+        <section class="section-space">
+          <div class="items d-flex">
+            <div>
+              <div class="opts opts-animation">
+                <a class="info-view" href="{% url 'jt-view-solicitud' %}">
+                  <div class="m-3 text-white">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="50"
+                      height="50"
+                      fill="currentColor"
+                      class="bi bi-file-earmark-lock"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M10 7v1.076c.54.166 1 .597 1 1.224v2.4c0 .816-.781 1.3-1.5 1.3h-3c-.719 0-1.5-.484-1.5-1.3V9.3c0-.627.46-1.058 1-1.224V7a2 2 0 1 1 4 0M7 7v1h2V7a1 1 0 0 0-2 0M6 9.3v2.4c0 .042.02.107.105.175A.64.64 0 0 0 6.5 12h3a.64.64 0 0 0 .395-.125c.085-.068.105-.133.105-.175V9.3c0-.042-.02-.107-.105-.175A.64.64 0 0 0 9.5 9h-3a.64.64 0 0 0-.395.125C6.02 9.193 6 9.258 6 9.3"
+                      />
+                      <path
+                        d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2M9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z"
+                      />
+                    </svg>
+                    <h4 class="mt-2">Ver Solicitudes</h4>
+                    <p>
+                      Haga click en este enlace para gestionar las solicitudes
+                      generadas.
+                    </p>
+                  </div>
+                </a>
+              </div>
             </div>
-            <div class="opts opts-animation">
-              <a class="info-view" href="{% url 'jt-view-solicitud' %}">
-                <div class="m-3 text-white">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="50"
-                    height="50"
-                    fill="currentColor"
-                    class="bi bi-file-earmark-lock"
-                    viewBox="0 0 16 16"
+          </div>
+        </section>
+        <section class="section-space">
+          <div class="items d-flex">
+            <div>
+              <div class="opts opts-animation">
+                <a class="info-view" href="{% url 'jt-pays' %}">
+                  <div class="m-3 text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-wallet2" viewBox="0 0 16 16">
+                      <path d="M12.136.326A1.5 1.5 0 0 1 14 1.78V3h.5A1.5 1.5 0 0 1 16 4.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 13.5v-9a1.5 1.5 0 0 1 1.432-1.499zM5.562 3H13V1.78a.5.5 0 0 0-.621-.484zM1.5 4a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5z"/>
+                    </svg>
+                    <h4 class="mt-2">Ingresar Pagos</h4>
+                    <p>
+                      Haga click en este enlace para gestionar los pagos.
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+       </div>
+      <!-- Fin Info jt -->
+      <div>
+        <h1 class="text-center">
+          Nuestras <span class="txt-area">Áreas de Trabajo</span>
+        </h1>
+        <div class="text-center justify-content-center align-items-center">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="50"
+            height="50"
+            fill="currentColor"
+            class="bi bi-book"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783"
+            />
+          </svg>
+        </div>
+      </div>
+      <section class="section-space">
+        <div class="container mb-4">
+          <div class="items">
+            <div class="card shadow-lg">
+              <img
+                src="{% static 'img/derecho-1.jpg' %}"
+                alt="Área de Trabajo"
+                class="card-derecho"
+              />
+              <div class="card-body">
+                <h4 class="card-title text-center">Derecho Civil</h4>
+                <p>
+                  Te representamos en cualquier problema civil, tales como,
+                  herencias, contratos, juicios de arrendamiento, precario,
+                  indemnizaciones de perjuicios, particiones, etc.
+                </p>
+              </div>
+              <div class="mt-1 mb-3 mx-auto">
+                <button type="button" class="btn btn-light btn-green">
+                  <a class="text-white" href="{% url 'solicitud' %}"
+                    >Contactanos</a
                   >
-                    <path
-                      d="M10 7v1.076c.54.166 1 .597 1 1.224v2.4c0 .816-.781 1.3-1.5 1.3h-3c-.719 0-1.5-.484-1.5-1.3V9.3c0-.627.46-1.058 1-1.224V7a2 2 0 1 1 4 0M7 7v1h2V7a1 1 0 0 0-2 0M6 9.3v2.4c0 .042.02.107.105.175A.64.64 0 0 0 6.5 12h3a.64.64 0 0 0 .395-.125c.085-.068.105-.133.105-.175V9.3c0-.042-.02-.107-.105-.175A.64.64 0 0 0 9.5 9h-3a.64.64 0 0 0-.395.125C6.02 9.193 6 9.258 6 9.3"
-                    />
-                    <path
-                      d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2M9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z"
-                    />
-                  </svg>
-                  <h4 class="mt-2">Ver Solicitudes</h4>
-                  <p>
-                    Haga click en este enlace para gestionar las solicitudes
-                    generadas.
-                  </p>
-                </div>
-              </a>
+                </button>
+              </div>
+            </div>
+            <div class="card shadow-lg">
+              <img
+                src="{% static 'img/derecho-2.jpg' %}"
+                alt="Área de Trabajo"
+                class="card-derecho"
+              />
+              <div class="card-body">
+                <h4 class="card-title text-center">Derecho Laboral</h4>
+                <p>
+                  Prestamos todo tipo de asesorías para empresas como también a
+                  trabajadores en materia de derecho laboral (despidos,
+                  beneficios sociales, contratos laborales y más).
+                </p>
+              </div>
+              <div class="mt-1 mb-3 mx-auto">
+                <button type="button" class="btn btn-light btn-green">
+                  <a class="text-white" href="{% url 'solicitud' %}"
+                    >Contactanos</a
+                  >
+                </button>
+              </div>
+            </div>
+            <div class="card shadow-lg">
+              <img
+                src="{% static 'img/derecho-3.jpg' %}"
+                alt="Área de Trabajo"
+                class="card-derecho"
+              />
+              <div class="card-body">
+                <h4 class="card-title text-center">Derecho Comercial</h4>
+                <p>
+                  Somos especialistas en transacciones comerciales, títulos
+                  valores en general, operaciones de constitución,
+                  financiamiento y reestructuración de empresas.
+                </p>
+              </div>
+              <div class="mt-1 mb-3 mx-auto">
+                <button type="button" class="btn btn-light btn-green">
+                  <a class="text-white" href="{% url 'solicitud' %}"
+                    >Contactanos</a
+                  >
+                </button>
+              </div>
+            </div>
+            <div class="card shadow-lg">
+              <img
+                src="{% static 'img/derecho-4.jpg' %}"
+                alt="Área de Trabajo"
+                class="card-derecho"
+              />
+              <div class="card-body">
+                <h4 class="card-title text-center">Derecho de Familia</h4>
+                <p>
+                  Encontramos las mejores soluciones a largo plazo para cada uno
+                  de nuestros representados. Con nuestra amplia experiencia en
+                  más de 1.000 causas tramitadas en todo Chile.
+                </p>
+              </div>
+              <div class="mt-1 mb-3 mx-auto">
+                <button type="button" class="btn btn-light btn-green">
+                  <a class="text-white" href="{% url 'solicitud' %}"
+                    >Contactanos</a
+                  >
+                </button>
+              </div>
+            </div>
+            <div class="card shadow-lg">
+              <img
+                src="{% static 'img/derecho-5.jpg' %}"
+                alt="Área de Trabajo"
+                class="card-derecho"
+              />
+              <div class="card-body">
+                <h4 class="card-title text-center">Derecho Penal</h4>
+                <p>
+                  Te ofrecemos soluciones concretas y transparentes, en base a
+                  nuestras amplia experiencia. Tenemos estrategias claras desde
+                  un principio y resolvemos tu problema lo más rápido posible.
+                </p>
+              </div>
+              <div class="mt-1 mb-3 mx-auto">
+                <button type="button" class="btn btn-light btn-green">
+                  <a class="text-white" href="{% url 'solicitud' %}"
+                    >Contactanos</a
+                  >
+                </button>
+              </div>
+            </div>
+            <div class="card shadow-lg">
+              <img
+                src="{% static 'img/derecho-6.jpg' %}"
+                alt="Área de Trabajo"
+                class="card-derecho"
+              />
+              <div class="card-body">
+                <h4 class="card-title text-center">Derecho Inmobiliario</h4>
+                <p>
+                  Prestamos asesorías en la compra y venta de inmuebles,
+                  protegemos tu inversión, confección de contratos relacionados
+                  a inmuebles y todo tipo de regularizaciones inmobiliaria.
+                </p>
+              </div>
+              <div class="mt-1 mb-3 mx-auto">
+                <button type="button" class="btn btn-light btn-green">
+                  <a class="text-white" href="{% url 'solicitud' %}"
+                    >Contactanos</a
+                  >
+                </button>
+              </div>
             </div>
           </div>
         </div>
       </section>
-      <!-- Fin Categorias -->
     </main>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

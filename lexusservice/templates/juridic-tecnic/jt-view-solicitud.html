@@ -13,14 +13,22 @@
     />
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
   </head>
-  {% include 'base/navbar.html' %}
+  {% include 'base/nav-jt.html' %}
   <body>
+    <div class="go-back">
+      <a class="text-green-back" href="{% url 'jt-info' %}">
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-arrow-bar-left" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M12.5 15a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 1 0v13a.5.5 0 0 1-.5.5M10 8a.5.5 0 0 1-.5.5H3.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L3.707 7.5H9.5a.5.5 0 0 1 .5.5"/>
+        </svg>
+        Volver
+      </a>
+    </div>
     <main>
       <!-- Solicitud de Usuario -->
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-md-6">
-            <div class="formulario-user shadow-lg mb-5 mt-5">
+            <div class="formulario-user shadow-lg mb-5 mt-3">
               <div class="better-background">
                 <div class="d-flex align-items-center">
                   <svg
@@ -38,7 +46,7 @@
                       d="M9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5zm0 1v2A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"
                     />
                   </svg>
-                  <h3 class="mt-2">Mis Solicitudes</h3>
+                  <h3 class="mt-2">Solicitudes del Cliente</h3>
                 </div>
                 <hr />
                 <!-- Solicitudes -->
@@ -65,9 +73,11 @@
                         <td>Derecho de Familia</td>
                         <td>07/08/24</td>
                         <td>
-                          <button type="submit" class="btn btn-light btn-green">
-                            Ver
-                          </button>
+                          <a href="{% url 'budget' %}">
+                            <button type="submit" class="btn btn-light btn-green">
+                              Ver
+                            </button>
+                          </a>
                         </td>
                       </tr>
                       <tr>
@@ -75,9 +85,11 @@
                         <td>Derecho Laboral</td>
                         <td>05/12/23</td>
                         <td>
-                          <button type="submit" class="btn btn-light btn-green">
-                            Ver
-                          </button>
+                          <a href="{% url 'budget' %}">
+                            <button type="submit" class="btn btn-light btn-green">
+                              Ver
+                            </button>
+                          </a>
                       </td>
                       </tr>
                       <tr>
@@ -85,9 +97,11 @@
                         <td>Derecho Inmobiliario</td>
                         <td>28/09/24</td>
                         <td>
-                          <button type="submit" class="btn btn-light btn-green">
-                            Ver
-                          </button>
+                          <a href="{% url 'budget' %}">
+                            <button type="submit" class="btn btn-light btn-green">
+                              Ver
+                            </button>
+                          </a>
                         </td>
                       </tr>
                       <tr>
@@ -95,9 +109,11 @@
                         <td>Derecho de Familia</td>
                         <td>06/08/24</td>
                         <td>
-                          <button type="submit" class="btn btn-light btn-green">
-                            Ver
-                          </button>
+                          <a href="{% url 'budget' %}">
+                            <button type="submit" class="btn btn-light btn-green">
+                              Ver
+                            </button>
+                          </a>
                         </td>
                       </tr>
                     </table>

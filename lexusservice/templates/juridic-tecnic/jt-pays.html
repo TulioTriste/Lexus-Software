@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lexus Service | Gestor de pagos</title>
+    {% load static %}
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  </head>
+  {% include 'base/nav-jt.html' %}
+  <body>
+    <div class="go-back">
+      <a class="text-green-back" href="{% url 'jt-info' %}">
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-arrow-bar-left" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M12.5 15a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 1 0v13a.5.5 0 0 1-.5.5M10 8a.5.5 0 0 1-.5.5H3.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L3.707 7.5H9.5a.5.5 0 0 1 .5.5"/>
+        </svg>
+        Volver
+      </a>
+    </div>
+    <main>
+      <!-- Formulario de pagos -->
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <div class="formulario shadow-lg mb-5 mt-3">
+              <div class="d-flex">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="50"
+                  height="50"
+                  fill="currentColor"
+                  class="bi bi-credit-card-2-back text-green-user"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M11 5.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5z"
+                  />
+                  <path
+                    d="M2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zm13 2v5H1V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1m-1 9H2a1 1 0 0 1-1-1v-1h14v1a1 1 0 0 1-1 1"
+                  />
+                </svg>
+                <h1 class="text-green-user title-prop">Ingreso de Pagos</h1>
+              </div>
+              <hr />
+              <div class="better-background">
+                <form action="" method="POST">
+                  <div>
+                    <label for="rut"> RUT </label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="rut"
+                      name="rut"
+                      placeholder="Ej: 12345678-K"
+                    />
+                  </div>
+                  <div id="rut-feedback"></div>
+                  <hr>
+                  <div class="form-group mt-2">
+                    <label for="nombre">Nombre </label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="nombre"
+                      placeholder="Ingrese su nombre"
+                    />
+                  </div>
+                  <div id="nombre-feedback"></div>
+                  <div class="form-group mt-2">
+                    <label for="telefono">Télefono </label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="telefono"
+                      placeholder="Ej: 912345678"
+                    />
+                  </div>
+                  <div id="telefono-feedback"></div>
+                  <div class="form-group mt-2">
+                    <label for="email">E-mail </label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="email"
+                      placeholder="Ej: ejemplo@gmail.com"
+                    />
+                  </div>
+                  <div id="email-feedback"></div>
+                  <hr />
+                  <div>
+                    <label class="mb-1" for="servicio-solicitado">
+                      Servicio Solicitado
+                    </label>
+                    <select class="mb-1 form-control" name="" id="">
+                      <option value="">Derecho Civil</option>
+                      <option value="">Derecho Laboral</option>
+                      <option value="">Derecho Comercial</option>
+                      <option value="">Derecho de Familia</option>
+                      <option value="">Derecho Penal</option>
+                      <option value="">Derecho Inmobiliario</option>
+                    </select>
+                  </div>
+                  <div id="servicio-solicitado-feedback"></div>
+                  <div class="form-group mt-2">
+                    <label for="monto">Ingrese Monto</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="monto"
+                      placeholder="$ 00000000"
+                    />
+                  </div>
+                  <div id="monto-feedback"></div>
+                </form>
+              </div>
+              <div class="term-jt">
+                <div class="mt-4 gap-2">
+                  <button type="submit" class="btn btn-light btn-green">
+                    Ingresar pago
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+  {% include 'base/footer.html' %}
+</html>

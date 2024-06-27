@@ -14,9 +14,6 @@ def registro(request):
 def password_recovery(request):
     return render(request, 'pages/password-recovery.html')
 
-def info(request):
-    return render(request, 'pages/info.html')
-
 def terms(request):
     return render(request, 'pages/terms.html')
 
@@ -43,3 +40,21 @@ def jt_info(request):
 
 def jt_view_solicitud(request):
     return render(request, 'juridic-tecnic/jt-view-solicitud.html')
+
+def budget(request):
+    return render(request, 'juridic-tecnic/budget.html')
+
+def jt_pays(request):
+    return render(request, 'juridic-tecnic/jt-pays.html')
+
+def view_pays(request):
+    return render(request, 'profile/view-pays.html')
+
+def view_causas(request):
+    return render(request, 'profile/view-causas.html')
+
+def view_solicitud(request):
+    return render(request, 'profile/view-solicitud.html')
+
+def layer_view(request):
+    return render(request, 'layers/layer-view.html')

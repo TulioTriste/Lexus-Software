@@ -25,6 +25,11 @@ a {
   transition: 0.2s;
 }
 
+.go-back {
+  border-radius: 5px;
+  padding: 15px;
+}
+
 .text-bg-green {
   background-color: #004040;
   color: white;
@@ -32,6 +37,10 @@ a {
 
 .title-user {
   margin-left: 2% !important;
+}
+
+.title-prop {
+  margin-left: 3px!important;
 }
 
 .bi-book {
@@ -95,6 +104,11 @@ a {
   justify-content: space-between;
 }
 
+.term-jt {
+  display: flex;
+  justify-content: end;
+}
+
 .terms {
   transition: 0.2s;
   color: #004040;
@@ -126,6 +140,11 @@ a {
   width: 100;
   border-radius: 5px;
   background-color: white;
+}
+
+.form-profile {
+  flex: 0 0 auto;
+  width: 60%;
 }
 
 .info-user {
@@ -214,7 +233,6 @@ a {
 .info-view {
   transition: 0.2s;
 }
-
 .text-green-user {
   color: #004040;
 }
@@ -227,6 +245,18 @@ a {
 .text-green:hover {
   transition: 0.2s;
   color: #008080 !important;
+}
+
+.text-green-back {
+  transition: 0.2s;
+  color: #004040 !important;
+  font-size: larger;
+}
+
+.text-green-back:hover {
+  transition: 0.2s;
+  color: #008080 !important;
+  font-size: larger;
 }
 
 .btn-green {
