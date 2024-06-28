@@ -1,10 +1,12 @@
 from django.shortcuts import render
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
 def index(request):
     return render(request, 'pages/index.html')
 
+@login_required
 def solicitud(request):
     return render(request, 'pages/solicitud.html')
 
@@ -20,8 +22,17 @@ def terms(request):
 def politics(request):
     return render(request, 'pages/politics.html')
 
-def user(request):
-    return render(request, 'profile/user.html')
+@login_required
+def mis_datos(request):
+    context = {
+        'rut': request.user.rut,
+        'nombre': request.user.nombre,
+        'apellido': request.user.apellido,
+        'telefono': request.user.telefono,
+        'email': request.user.email,
+        'direccion': request.user.direccion,
+    }
+    return render(request, 'profile/mis-datos.html', context)
 
 def solicitudes(request):
     return render(request, 'profile/solicitudes.html')

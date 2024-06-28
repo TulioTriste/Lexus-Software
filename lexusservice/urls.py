@@ -1,5 +1,6 @@
 from django.urls import path
-from . import views
+from django.views.decorators.csrf import csrf_exempt
+from . import views, apis
 
 urlpatterns = [
     path('', views.index, name='index'),
@@ -8,7 +9,7 @@ urlpatterns = [
     path('pages/password-recovery.html', views.password_recovery, name='password-recovery'),
     path('pages/terms.html', views.terms, name='terms'),
     path('pages/politics.html', views.politics, name='politics'),
-    path('profile/user.html', views.user, name='user'),
+    path('profile/mis-datos.html', views.mis_datos, name='profile/mis-datos'),
     path('profile/solicitudes.html', views.solicitudes, name='solicitudes'),
     path('profile/causas.html', views.causas, name='causas'),
     path('profile/finanzas.html', views.finanzas, name='finanzas'),
@@ -27,4 +28,9 @@ urlpatterns = [
     path('administrator/admin-view.html', views.admin_view, name='admin-view'),
     path('administrator/admin-report-mensual.html', views.admin_report_mensual, name='admin-report-mensual'),
     path('administrator/admin-report-anual.html', views.admin_report_anual, name='admin-report-anual'),
+    path('api/registro', csrf_exempt(apis.registrarse), name='api/registro'),
+    path('api/login', csrf_exempt(apis.iniciar_sesion), name='api/login'),
+    path('api/logout', csrf_exempt(apis.cerrar_sesion), name='api/logout'),
+    path('api/authenticated', csrf_exempt(apis.is_aunthenticated), name='api/authenticated'),
+    path('api/profile/mis-datos', csrf_exempt(apis.guardar_mis_datos), name='api/profile/mis-datos'),
 ]

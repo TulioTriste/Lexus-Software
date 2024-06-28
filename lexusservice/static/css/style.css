@@ -277,6 +277,12 @@ a {
   color: white !important;
 }
 
+.btn-green:disabled {
+  transition: 0.2s;
+  background-color: #535353;
+  color: white !important;
+}
+
 .btn-green:hover {
   transition: 0.2s;
   background-color: #008080;
@@ -307,4 +313,13 @@ a {
 .card-green {
   background-color: #004040;
   color: white;
+}
+
+.nav-item {
+  cursor: pointer;
+}
+
+input:disabled {
+  color: rgba(141, 141, 141, 0.699);
+  cursor: not-allowed;
 }

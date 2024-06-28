@@ -1,119 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lexus Service | Solicitud</title>
-    {% load static %}
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
-  </head>
-  {% include 'base/navbar.html' %}
-  <body>
-    <main>
-      <!-- Formulario de Solicitud -->
-      <div class="container">
-        <div class="row space-solicitud">
-          <div class="col-md-5">
-            <div>
-              <h4 class="mt-5">Información del usuario</h4>
-              <div class="formulario shadow-lg mb-5">
-                <div class="better-background">
-                  <form action="" method="POST">
-                    <div>
-                      <label for="rut"
-                        >RUT <span class="form-alert">*</span></label
-                      >
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="rut"
-                        name="rut"
-                        placeholder="Ej: 12345678-K"
-                      />
-                    </div>
-                    <div id="rut-feedback"></div>
-                    <div>
-                      <label for="nombre"
-                        >Nombre <span class="form-alert">*</span></label
-                      >
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="nombre"
-                        placeholder="Ingrese su nombre"
-                      />
-                    </div>
-                    <div id="nombre-feedback"></div>
-                    <div class="form-group mt-2">
-                      <label for="apellido"
-                        >Apellido <span class="form-alert">*</span></label
-                      >
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="apellido"
-                        placeholder="Ingrese su apellido"
-                      />
-                    </div>
-                    <div id="apellido-feedback"></div>
-                    <div class="form-group mt-2">
-                      <label for="telefono"
-                        >Télefono <span class="form-alert">*</span></label
-                      >
-                      <input
-                        type="number"
-                        class="form-control"
-                        id="telefono"
-                        placeholder="Ej: 912345678"
-                      />
-                    </div>
-                    <div id="telefono-feedback"></div>
-                    <div class="form-group mt-2">
-                      <label for="direccion">
-                        Dirección <span class="form-alert">*</span>
-                      </label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="direccion"
-                        placeholder="Ej: Av.Siempreviva 1234"
-                        name="direccion"
-                      />
-                    </div>
-                    <div id="direccion-feedback"></div>
-                    <div class="form-group mt-2">
-                      <label for="email"
-                        >E-mail <span class="form-alert">*</span></label
-                      >
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="email"
-                        placeholder="Ej: ejemplo@gmail.com"
-                      />
-                    </div>
-                    <div id="email-feedback"></div>
-                  </form>
-                </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lexus Service | Solicitud</title>
+  {% load static %}
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+</head>
+{% include 'base/navbar.html' %}
+
+<body>
+  <main>
+    <!-- Formulario de Solicitud -->
+    <div class="container">
+      <div class="row space-solicitud">
+        <div class="col-md-5">
+          <div>
+            <h4 class="mt-5">Información del usuario</h4>
+            <div class="formulario shadow-lg mb-5">
+              <div class="better-background">
+                <form action="" method="POST">
+                  <div>
+                    <label for="rut">RUT <span class="form-alert">*</span></label>
+                    <input type="text" class="form-control" id="rut" name="rut" placeholder="Ej: 12345678-K" />
+                  </div>
+                  <div id="rut-feedback"></div>
+                  <div>
+                    <label for="nombre">Nombre <span class="form-alert">*</span></label>
+                    <input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre" />
+                  </div>
+                  <div id="nombre-feedback"></div>
+                  <div class="form-group mt-2">
+                    <label for="apellido">Apellido <span class="form-alert">*</span></label>
+                    <input type="text" class="form-control" id="apellido" placeholder="Ingrese su apellido" />
+                  </div>
+                  <div id="apellido-feedback"></div>
+                  <div class="form-group mt-2">
+                    <label for="telefono">Télefono <span class="form-alert">*</span></label>
+                    <input type="number" class="form-control" id="telefono" placeholder="Ej: 912345678" />
+                  </div>
+                  <div id="telefono-feedback"></div>
+                  <div class="form-group mt-2">
+                    <label for="direccion">
+                      Dirección <span class="form-alert">*</span>
+                    </label>
+                    <input type="text" class="form-control" id="direccion" placeholder="Ej: Av.Siempreviva 1234"
+                      name="direccion" />
+                  </div>
+                  <div id="direccion-feedback"></div>
+                  <div class="form-group mt-2">
+                    <label for="email">E-mail <span class="form-alert">*</span></label>
+                    <input type="text" class="form-control" id="email" placeholder="Ej: ejemplo@gmail.com" />
+                  </div>
+                  <div id="email-feedback"></div>
+                </form>
               </div>
             </div>
           </div>
-          <div class="col-md-5">
-            <div>
-              <h4 class="mt-5">Descripción de Solicitud</h4>
+        </div>
+        <div class="col-md-5">
+          <div>
+            <h4 class="mt-5">Descripción de Solicitud</h4>
             <div class="formulario shadow-lg">
               <div class="better-bacground">
                 <form action="" method="POST">
                   <div>
-                    <label class="mb-1" for="dest"
-                      >Seleccione el servicio que necesita <span class="form-alert">*</span></label
-                    >
+                    <label class="mb-1" for="dest">Seleccione el servicio que necesita <span
+                        class="form-alert">*</span></label>
                     <select class="mb-1 form-control" name="" id="">
                       <option value="">Derecho Civil</option>
                       <option value="">Derecho Laboral</option>
@@ -124,21 +80,13 @@
                     </select>
                   </div>
                   <div class="mb-2 mt-2">
-                    <label for="nombre-asunto"
-                      >Nombre del Asunto <span class="form-alert">*</span></label
-                    >
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="nombre-asunto"
-                      placeholder="Ingrese el nombre del asunto"
-                    />
+                    <label for="nombre-asunto">Nombre del Asunto <span class="form-alert">*</span></label>
+                    <input type="text" class="form-control" id="nombre-asunto"
+                      placeholder="Ingrese el nombre del asunto" />
                   </div>
                   <div id="nombre-asunto-feedback"></div>
                   <div>
-                    <label class="mb-1" for="dest"
-                      >Mensaje <span class="form-alert">*</span></label
-                    >
+                    <label class="mb-1" for="dest">Mensaje <span class="form-alert">*</span></label>
                     <textarea class="form-control" name="" id=""></textarea>
                   </div>
                 </form>
@@ -149,9 +97,7 @@
                 <p class="fw-lighter section-space">
                   <input type="checkbox" name="check" id="check" />
                   Acepto los
-                  <a class="text-green" href=""
-                    >Términos y Condiciones</a
-                  >
+                  <a class="text-green" href="">Términos y Condiciones</a>
                 </p>
               </div>
               <div class="mt-2 gap-2">
@@ -160,16 +106,15 @@
                 </button>
               </div>
             </div>
-            </div>
           </div>
         </div>
       </div>
-    </main>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
-  </body>
-  {% include 'base/footer.html' %}
+    </div>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</body>
+{% include 'base/footer.html' %}
+
 </html>

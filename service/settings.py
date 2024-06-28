@@ -69,6 +69,9 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'service.wsgi.application'
+AUTH_USER_MODEL = 'lexusservice.Usuario'
+
+LOGIN_URL = '/'
 
 
 # Database

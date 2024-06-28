@@ -14,7 +14,7 @@
         <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
       </svg>
     </div>
-    <h5 class="offcanvas-title title-user">Nombre</h5>
+    <h5 class="offcanvas-title title-user">{{ request.user.nombre }} {{ request.user.apellido }}</h5>
     <button
       type="button"
       class="btn-close btn-close-white"
@@ -25,23 +25,23 @@
   <div class="offcanvas-body">
     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
       <li class="nav-item user-files">
-        <a class="nav-link active" aria-current="page" href="{% url 'user' %}">Mi Prefil</a>
+        <a class="nav-link active" aria-current="page" href="{% url 'profile/mis-datos' %}">Mi Datos</a>
       </li>
       <hr>
       <li class="nav-item user-files">
-        <a class="nav-link" href="{% url 'solicitudes' %}">Solicitudes</a>
+        <a class="nav-link" href="{% url 'solicitudes' %}">Mis Solicitudes</a>
       </li>
       <li class="nav-item user-files">
-        <a class="nav-link" href="{% url 'causas' %}">Causas</a>
+        <a class="nav-link" href="{% url 'causas' %}">Mis Causas</a>
       </li>
       <li class="nav-item user-files">
-        <a class="nav-link" href="{% url 'finanzas' %}">Finanzas</a>
+        <a class="nav-link" href="{% url 'finanzas' %}">Mis Finanzas</a>
       </li>
     </ul>
     <hr>
     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
       <li class="nav-item user-files">
-        <a class="nav-link" href="">Cerrar Sesion</a>
+        <a class="nav-link" href="{% url 'api/logout' %}">Cerrar Sesión</a>
       </li>
     </ul>
   </div>
