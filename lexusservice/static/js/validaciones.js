@@ -1,9 +1,9 @@
-function validarNombre(nombre) {
-  return nombre.length <= 40 && nombre.length !== "";
+function validarVacio(input) {
+  return input.length !== "";
 }
 
-function validarApellido(apellido) {
-  return apellido.length <= 40 && apellido.length !== ""
+function validarLargoVacio(input) {
+  return input.length <= 50 && input.length !== "";
 }
 
 function validarTelefono(telefono) {
@@ -50,10 +50,6 @@ function validarRut(rutCompleto) {
     dvCalculado = "K";
   }
   return dv == dvCalculado;
-}
-
-function validarDireccion(direccion) {
-  return direccion.length !== "";
 }
 
 function validarPassword(password) {

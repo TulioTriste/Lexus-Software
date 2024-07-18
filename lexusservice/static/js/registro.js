@@ -111,7 +111,7 @@ $(document).ready(function () {
 
   nombre.on("keyup", function () {
     let nombreVal = $(this).val();
-    let valido = validarNombre(nombreVal);
+    let valido = validarLargoVacio(nombreVal);
 
     validaciones.nombre = valido;
     validarRegistro(validaciones, btnRegistro);
@@ -147,7 +147,7 @@ $(document).ready(function () {
 
   apellido.on("keyup", function () {
     let apellidoVal = $(this).val();
-    let valido = validarApellido(apellidoVal);
+    let valido = validarLargoVacio(apellidoVal);
 
     validaciones.apellido = valido;
     validarRegistro(validaciones, btnRegistro);
@@ -255,7 +255,7 @@ $(document).ready(function () {
 
   direccion.on("keyup", function () {
     let val = $(this).val();
-    let valido = validarDireccion(val);
+    let valido = validarVacio(val);
 
     validaciones.email = valido;
     validarRegistro(validaciones, btnRegistro);

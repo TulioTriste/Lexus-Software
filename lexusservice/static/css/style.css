@@ -319,7 +319,7 @@ a {
   cursor: pointer;
 }
 
-input:disabled {
+input:disabled, textarea:disabled {
   color: rgba(141, 141, 141, 0.699);
   cursor: not-allowed;
 }

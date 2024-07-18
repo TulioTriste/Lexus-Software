@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
+from .models import Servicio, Solicitud
 
 # Create your views here.
 
@@ -8,7 +9,10 @@ def index(request):
 
 @login_required
 def solicitud(request):
-    return render(request, 'pages/solicitud.html')
+    context = {
+        'servicios': Servicio.objects.all()
+    }
+    return render(request, 'pages/solicitud.html', context)
 
 def registro(request):
     return render(request, 'pages/registro.html')
@@ -34,12 +38,18 @@ def mis_datos(request):
     }
     return render(request, 'profile/mis-datos.html', context)
 
-def solicitudes(request):
-    return render(request, 'profile/solicitudes.html')
+@login_required
+def mis_solicitudes(request):
+    context = {
+        'solicitudes': Solicitud.objects.get_solicitudes(request.user).all()
+    }
+    return render(request, 'profile/mis-solicitudes.html', context)
 
+@login_required
 def causas(request):
     return render(request, 'profile/causas.html')
 
+@login_required
 def finanzas(request):
     return render(request, 'profile/finanzas.html')
 
@@ -58,11 +68,16 @@ def budget(request):
 def jt_pays(request):
     return render(request, 'juridic-tecnic/jt-pays.html')
 
+@login_required
 def view_causas(request):
     return render(request, 'profile/view-causas.html')
 
-def view_solicitud(request):
-    return render(request, 'profile/view-solicitud.html')
+@login_required
+def ver_solicitud(request, id_solicitud):
+    context = {
+        'solicitud': Solicitud.objects.get_solicitud(id_solicitud)
+    }
+    return render(request, 'profile/ver-solicitud.html', context)
 
 def layer_view(request):
     return render(request, 'layers/layer-view.html')
